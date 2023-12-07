@@ -145,7 +145,7 @@ cat attention.txt
 *A recent system malfunction has caused various passwords to be changed. All skynet employees are required to change their password after seeing this.*<br>
 *-Miles Dyson*
 
-Hmm, this is interesting. This might mean that we can attempt to brute force the passwords in some way. There goes **Miles** again, to further increease the odds that its a username.<br>
+Hmm, this is interesting. This might mean that we can attempt to brute force the passwords in some way. There goes **Miles** again, to further increase the odds that its a username.<br>
 
 <p>Let's first list the contents of the log files to see if the mean anything to us.</p>
 
