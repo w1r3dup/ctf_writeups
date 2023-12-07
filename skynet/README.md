@@ -230,7 +230,25 @@ Now, let's head over to the tab *Payloads*. This is where we get to insert the p
 
 <p align="center"> <img src="./images/29.png"></p><br>
 
+Under Payload settings, click on Load and insert *log1.txt*.<br>
 
+<p align="center"> <img src="./images/30.png"></p><br>
+
+Now, let's hit *Start Attack* and hope for the best.<br>
+
+**We got it!** But for the sake of the CTF requirements, I will not show the actual password, but it is easily recognisable by checking a significant change in the *Length* or *Status code* columns whilst running the attack.<br>
+
+**This will answer question 1 of the CTF**<br>
+
+<p align="center"> <img src="./images/31.png"></p><br>
+
+Close Burpsuite, turn off FoxyProxy and enter your newly found password with username **milesdyson**.<br>
+
+<p align="center"> <img src="./images/32.png"></p><br>
+
+These are emails coming from skynet. Let's see what *Samba Password reset* contains.<br>
+
+<p align="center"> <img src="./images/33.png"></p><br>
 
 
 
