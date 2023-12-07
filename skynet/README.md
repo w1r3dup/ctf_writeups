@@ -293,5 +293,62 @@ Number 1 shows what seems like a directory for a new CMS. *Miles you gotta take 
 
 <h2>Port 80 (HTTP) Revisited Once More:</h2>
 
+<p align="center"> <img src="./images/39.png"></p><br>
+
+<p>This looks like a simple page with no clues, not even on Page Source.</p>
+
+Let's try running a ```gobuster``` scan again to see if we can bust directories within this CMS.<br>
+
+<p align="center"> <img src="./images/40.png"></p><br>
+
+**Hidden directories:**<br>
+/administrator<br>
+
+<p>Let's investigate that newly found directory.</p>
+
+<p align="center"> <img src="./images/41.png"></p><br>
+
+With no credentials for us to try, let's use ```searchsploit``` again and see if there are any vulnerabilities to exploit.<br>
+
+<p align="center"> <img src="./images/42.png"></p><br>
+
+<p>Okay, we have a RFI vulnerability on our hands.</p>
+
+**This helps answer question 3 of the CTF.**<br>
+
+<p align="center"> <img src="./images/43.png"></p><br>
+
+Let's see what it does. Print the contents of *25971.txt* on the terminal and analyse it thoroughly.<br>
+
+<p align="center"> <img src="./images/44.png"></p><br>
+
+<p>According to the last line, we can include a malicious file in place of [FI].</p>
+
+<p>We can try and use a PHP Reverse Shell for this.</p>
+
+<p>Let's use Pentestmonkey's script:</p>
+
+*https://github.com/pentestmonkey/php-reverse-shell*<br>
+
+Click on the green button *Code* and click on *Copy to Clipboard* button as shown below:<br>
+
+<p align="center"> <img src="./images/45.png"></p><br>
+
+<p>Head over to the terminal and clone it.</p>
+
+```bash
+git clone https://github.com/pentestmonkey/php-reverse-shell.git
+```
+
+<p>That will download the reverse shell on your local machine.</p>
+
+
+
+
+
+
+
+
+
 
 
