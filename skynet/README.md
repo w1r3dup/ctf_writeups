@@ -318,6 +318,12 @@ gobuster dir -u http://[targetIP]/45kra24zxs28v3yd -w /usr/share/dirbuster/wordl
 
 With no credentials for us to try, let's use ```searchsploit``` again and see if there are any vulnerabilities to exploit.<br>
 
+<h3>SEARCHSPLOIT</h3>
+
+```bash
+searchsploit cuppa
+```
+
 <p align="center"> <img src="./images/42.png"></p><br>
 
 <p>Okay, we have a RFI vulnerability on our hands.</p>
