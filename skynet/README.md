@@ -159,8 +159,11 @@ Head back to your terminal tab where you had the ```smbclient``` running and try
 
 <p align="center"> <img src="./images/16.png"></p><br>
 
-Running the ```ls``` command will give an error, letting us know that no files exist within that share, making the share useless for us.
+Running the ```ls``` command will give an error, letting us know that no files exist within that share, making the share useless for us.<br>
 
+<p align="center"> <img src="./images/17.png"></p><br>
+
+**Tip: Type command** ```exit``` **to exit the current share you're in.**
 
 
 
