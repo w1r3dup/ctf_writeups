@@ -250,5 +250,12 @@ These are emails coming from skynet. Let's see what *Samba Password reset* conta
 
 <p align="center"> <img src="./images/33.png"></p><br>
 
+<p>Nice! We have ourselves Miles' Samba password!</p>
+
+Let's head back to ```smbclient``` and try and use the password to enter his share.
+
+<h2>Port 139 (SMB) Revisited:</h2>
+
+<p>Now that we know the username and the password, we need to change the command a little bit so we can log into the share using a specified username.</p>
 
 
