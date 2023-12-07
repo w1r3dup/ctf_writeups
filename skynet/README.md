@@ -82,6 +82,18 @@ Let's use smbclient to enumerate the SMB File Share system on the server.<br>
 $ smbclient -L \\\\[targetIP]\\ 
 ```
 
+<p align="center"> <img src="./images/8.png"></p><br>
+
+Here we can see the different SMB shares currently on the server. There is also a possible username: **milesdyson**. Let's see what we can access.
+
+**Anonymous**
+<p>The first share that catches my attention is the anonymous share. This will allow us to enter without specifying a username or password.</p>
+
+```bash
+$ smbclient \\\\[targetIP]\\anonymous
+```
+*(notice the removal of the ```-L``` switch since we are now not listing the shares, but rather connecting to, in this case **anonymous** as specified on ```\\anonymous```)*
+
 
 
 
