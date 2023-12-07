@@ -365,6 +365,10 @@ Now, let's open a new terminal instance and use **netcat** to listen to incoming
 
 <h3>NETCAT</h3>
 
+```bash
+nc -lvnp 7123
+```
+
 <p align="center"> <img src="./images/48.png"></p><br>
 
 Now that the listener is on, let's set up a simple HTTP server in the same location that our *php-reverse-shell* script is at.<br>
