@@ -7,4 +7,7 @@ Dedicated to all the legends on our Discord channel - *CyberSamurai*
 
 
 <h1> Enumeration </h1>
+<h2>NMAP</h2>
+<p>First, we start with the CLASSIC nmap scan</p>
+
 
