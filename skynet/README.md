@@ -3,6 +3,8 @@
 
 <h3 align="center">Dedicated to all the legends on our Discord channel - CyberSamurai</h3><br>
 
+<p align="center"> <img src="./images/_cybersamurai$.png"></p><br>
+
 <p align="center"> <img src="./images/1.jpg"></p><br>
 
 
