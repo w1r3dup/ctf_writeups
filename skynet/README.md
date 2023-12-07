@@ -1,3 +1,10 @@
-<h1>TryHackMe Tutorial</h1>
-<h2>Skynet</h2>
-![1](https://github.com/w1r3dup/ctf_writeups/assets/153192531/d67e51f2-602a-41ac-bf8c-d552d40fe5bf)
+<h1 align="center">TryHackMe Tutorial</h1>
+<h2 align="center">Skynet</h2>
+
+Dedicated to all the legends on our Discord channel - *CyberSamurai*
+
+<p align="center"> <img src="./images/1.jpg"></p>
+
+
+<h1> Enumeration </h1>
+
