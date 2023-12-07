@@ -3,7 +3,7 @@
 
 <h3 align="center">Dedicated to all the legends on our Discord channel - CyberSamurai</h3><br>
 
-<p align="center"> <img src="./images/_cybersamurai$.png"></p><br>
+<p align="center"> <img src="./images/cybersamurai.png"></p><br>
 
 <p align="center"> <img src="./images/1.jpg"></p><br>
 
@@ -185,6 +185,8 @@ For this, we will use *Burpsuite* to insert the password list as the payload to 
 
 ***Disclaimer:***
 *For this to work, you need to set up a proxy to be able to intercept traffic. In our case, we are using FoxyProxy. This is a FireFox extension that will allow us to do all the testing we require.*
+
+
 
 
 
