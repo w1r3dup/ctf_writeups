@@ -157,6 +157,9 @@ The contents of *log1.txt* seem to be a list of logged passwords! We can use the
 
 Head back to your terminal tab where you had the ```smbclient``` running and try and access the *IPC$* share.<br>
 
+<p align="center"> <img src="./images/16.png"></p><br>
+
+Running the ```ls``` command will give an error, letting us know that no files exist within that share, making the share useless for us.
 
 
 
