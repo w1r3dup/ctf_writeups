@@ -147,7 +147,7 @@ cat attention.txt
 
 Hmm, this is interesting. This might mean that we can attempt to brute force the passwords in some way. There goes **Miles** again, to further increase the odds that its a username.<br>
 
-<p>Let's first list the contents of the log files to see if the mean anything to us.</p>
+<p>Let's first list the contents of the log files to see if they mean anything to us.</p>
 
 <p align="center"> <img src="./images/15.png"></p><br>
 
