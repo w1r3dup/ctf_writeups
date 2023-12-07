@@ -1,9 +1,9 @@
 <h1 align="center">TryHackMe Tutorial</h1>
-<h2 align="center">Skynet</h2>
+<h2 align="center">Skynet<br>Room link: https://tryhackme.com/room/skynet</h2>
 
-Dedicated to all the legends on our Discord channel - *CyberSamurai*
+<h3 align="center">Dedicated to all the legends on our Discord channel - CyberSamurai</h3><br>
 
-<p align="center"> <img src="./images/1.jpg"></p>
+<p align="center"> <img src="./images/1.jpg"></p><br>
 
 
 <h1> Enumeration </h1>
