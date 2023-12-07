@@ -342,6 +342,8 @@ Let's see what it does. Print the contents of *25971.txt* on the terminal and an
 
 <p>We can try and use a PHP Reverse Shell for this.</p>
 
+<h3>PHP REVERSE SHELL</h3>
+
 <p>Let's use Pentestmonkey's script:</p>
 
 *https://github.com/pentestmonkey/php-reverse-shell*<br>
