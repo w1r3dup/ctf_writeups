@@ -55,8 +55,19 @@ If you had to navigate to the first 5 directories, you will find that all of the
 
 <p align="center"> <img src="./images/5.png"></p><br>
 
-However, /squirrelmail brings up what looks like a webmail system (hence the open ports 110 and 143?):<br>
+However, */squirrelmail* brings up what looks like a webmail system (hence the open ports 110 and 143?):<br>
 <p align="center"> <img src="./images/6.png"></p><br>
+
+While there is nothing we can do just as yet, it conviently discloses the version SquirrelMail is running on. **Version 1.4.23**.
+
+<h2>SEARCHSPLOIT</h2>
+
+```bash
+searchsploit squirrelmail
+```
+<p align="center"> <img src="./images/4.png"></p><br>
+
+
 
 
 
