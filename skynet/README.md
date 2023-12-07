@@ -196,6 +196,13 @@ And these are the settings you need to add:
 
 <p align="center"> <img src="./images/21.png"></p><br>
 
+After you successfully set FoxyProxy up, head over to Burpsuite, switch to the *Proxy* tab and click on *Intercept is off* to turn it on.
+
+<p align="center"> <img src="./images/22.png"></p><br>
+
+<p>Now, hit Refresh on the SquirrelMail page and the Proxy page will populate.</p>
+
+<p align="center"> <img src="./images/23.png"></p><br>
 
 
 
