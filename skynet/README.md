@@ -258,6 +258,8 @@ Let's head back to ```smbclient``` and try and use the password to enter his sha
 
 <p>Now that we know the username and the password, we need to change the command a little bit so we can log into the share using a specified username.</p>
 
+<h3>SMBCLIENT</h3>
+
 ```bash
 smbclient \\\\[targetIP]\\milesdyson -U milesdyson
 ```
@@ -298,6 +300,12 @@ Number 1 shows what seems like a directory for a new CMS. *Miles you gotta take 
 <p>This looks like a simple page with no clues, not even on Page Source.</p>
 
 Let's try running a ```gobuster``` scan again to see if we can bust directories within this CMS.<br>
+
+<h3>GOBUSTER</h3>
+
+```bash
+gobuster dir -u http://[targetIP]/45kra24zxs28v3yd -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+```
 
 <p align="center"> <img src="./images/40.png"></p><br>
 
