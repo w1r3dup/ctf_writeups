@@ -41,6 +41,19 @@ Viewing the Page Source also does not disclose any information.
 ```bash
 gobuster dir -u http://[targetIP]/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
 ```
+<p align="center"> <img src="./images/4.png"></p><br>
+
+**Hidden directories:**<br>
+/admin<br>
+/css<br>
+/js<br>
+/config<br>
+/ai<br>
+/squirrelmail<br>
+
+If you had to navigate to the first 5 directories, you will find that all of them are Forbidden.
+
+
 
 
 
