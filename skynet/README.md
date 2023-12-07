@@ -11,7 +11,7 @@ Dedicated to all the legends on our Discord channel - *CyberSamurai*
 <p>First, we start with the CLASSIC nmap scan</p>
 
 ```bash
-$ nmap -T4 -p- -A [targetIP]
+nmap -T4 -p- -A [targetIP]
 ```
 *[targetIP] being the IP of Skynet CTF*
 <p align="center"> <img src="./images/2.png"></p>
@@ -63,7 +63,7 @@ While there is nothing we can do just as yet, it conviently discloses the versio
 <h3>SEARCHSPLOIT</h3>
 
 ```bash
-$ searchsploit squirrelmail
+searchsploit squirrelmail
 ```
 <p align="center"> <img src="./images/7.png"></p><br>
 
@@ -79,7 +79,7 @@ $ searchsploit squirrelmail
 Let's use smbclient to enumerate the SMB File Share system on the server.<br>
 
 ```bash
-$ smbclient -L \\\\[targetIP]\\ 
+smbclient -L \\\\[targetIP]\\ 
 ```
 
 <p align="center"> <img src="./images/8.png"></p><br>
@@ -90,7 +90,7 @@ Here we can see the different SMB shares currently on the server. There is also 
 <p>The first share that catches my attention is the anonymous share. This will allow us to enter without specifying a username or password.</p>
 
 ```bash
-$ smbclient \\\\[targetIP]\\anonymous
+smbclient \\\\[targetIP]\\anonymous
 ```
 *(notice the removal of the ```-L``` switch since we are now not listing the shares, but rather connecting to, in this case **anonymous** as specified on ```\\anonymous```)*<br>
 
@@ -101,7 +101,7 @@ We are in.<br>
 Let's see what this share contains.<br>
 
 ```bash
-$ ls
+ls
 ```
 <p align="center"> <img src="./images/10.png"></p><br>
 
@@ -110,8 +110,21 @@ $ ls
 Lets download *attention.txt* on our local machine.<br>
 
 ```bash
-$ get attention.txt
+get attention.txt
 ```
+
+<p align="center"> <img src="./images/11.png"></p><br>
+
+<p>We will get to that later.</p>
+
+Change directory to the directory *logs* so we can check what there is inside.<br>
+
+```bash
+cd logs
+```
+
+
+
 
 
 
