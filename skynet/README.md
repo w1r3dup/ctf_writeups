@@ -29,7 +29,18 @@ Okay, so we have webserver being hosted on port 80, OpenSSH on port 22 and Samba
 Let's investigate port 80 first.<br><br>
 
 <h3>Port 80 (HTTP)</h3>
-Navigating to the webserver using the IP Address of the target machine (in this case 10.10.177.196) on a browser of your choice, you get the below:
+Navigating to the webserver using the IP Address of the target machine (in this case 10.10.177.196) on a browser of your choice, you get the below:<br>
+<p align="center"> <img src="./images/3.png"></p><br>
+
+This looks like a search engine, which does nothing when you search or when you click the buttons.<br>
+
+Viewing the Page Source also does not disclose any information.
+
+<h2>GOBUSTER</h2>
+
+```bash
+gobuster dir -u http://[targetIP]/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+```
 
 
 
