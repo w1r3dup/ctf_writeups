@@ -51,7 +51,15 @@ gobuster dir -u http://[targetIP]/ -w /usr/share/dirbuster/wordlists/directory-l
 /ai<br>
 /squirrelmail<br>
 
-If you had to navigate to the first 5 directories, you will find that all of them are Forbidden.
+If you had to navigate to the first 5 directories, you will find that all of them are Forbidden.<br>
+
+<p align="center"> <img src="./images/5.png"></p><br>
+
+However, /squirrelmail brings up what looks like a webmail system (hence the open ports 110 and 143?):<br>
+<p align="center"> <img src="./images/6.png"></p><br>
+
+
+
 
 
 
