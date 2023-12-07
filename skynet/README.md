@@ -171,7 +171,7 @@ Both shares *print$* and *milesdyson* will give an Access Denied error when atte
 
 With regards to port 139, it seems that there are no more clues for us to uncover. Let's go back to port 80 and attempt to brute force the SquirrelMail login using *milesdyson* as username and the password list found on *log1.txt*.<br>
 
-<h2>Port 80 (HTTP) Revisited:</h2>
+<h2>Port 80 (HTTP) Revisited</h2>
 
 For this, we will use *Burpsuite* to insert the password list as the payload to attempt to break in.
 
@@ -254,7 +254,7 @@ These are emails coming from skynet. Let's see what *Samba Password reset* conta
 
 Let's head back to ```smbclient``` and try and use the password to enter his share.<br>
 
-<h2>Port 139 (SMB) Revisited:</h2>
+<h2>Port 139 (SMB) Revisited</h2>
 
 <p>Now that we know the username and the password, we need to change the command a little bit so we can log into the share using a specified username.</p>
 
@@ -291,7 +291,7 @@ Number 1 shows what seems like a directory for a new CMS. *Miles you gotta take 
 
 <p>Let's head over to that directory and see what we find.</p>
 
-<h2>Port 80 (HTTP) Revisited Once More:</h2>
+<h2>Port 80 (HTTP) Revisited Once More</h2>
 
 <p align="center"> <img src="./images/39.png"></p><br>
 
