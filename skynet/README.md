@@ -165,7 +165,15 @@ Running the ```ls``` command will give an error, letting us know that no files e
 
 **Tip: Type command** ```exit``` **to exit the current share you're in.**
 
+Both shares *print$* and *milesdyson* will give an Access Denied error when attempting to access them.<br>
 
+With regards to port 139, it seems that there are no more clues for us to uncover. Let's go back to port 80 and attempt to brute force the SquirrelMail login using *milesdyson* as username and the password list found on *log1.txt*.<br>
+
+<h2>Port 80 (HTTP) Revisited:</h2>
+
+For this, we will use *Burpsuite* to insert the password list as the payload to attempt to break in.
+
+<h3>BURPSUITE</h3>
 
 
 
