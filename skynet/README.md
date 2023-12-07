@@ -103,6 +103,21 @@ Let's see what this share contains.<br>
 ```bash
 $ ls
 ```
+<p align="center"> <img src="./images/10.png"></p><br>
+
+<p>Here we have a file called attention.txt and a directory called logs.</p>
+
+Lets download *attention.txt* on our local machine.<br>
+
+```bash
+$ get attention.txt
+```
+
+
+
+
+
+
 
 
 
