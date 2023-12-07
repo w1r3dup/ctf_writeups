@@ -192,6 +192,8 @@ And these are the settings you need to add:
 
 <p align="center"> <img src="./images/20.png"></p><br>
 
+<p>When that is done, you will be able to switch to it using the extension.</p>
+
 
 
 
