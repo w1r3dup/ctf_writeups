@@ -92,7 +92,18 @@ Here we can see the different SMB shares currently on the server. There is also 
 ```bash
 $ smbclient \\\\[targetIP]\\anonymous
 ```
-*(notice the removal of the ```-L``` switch since we are now not listing the shares, but rather connecting to, in this case **anonymous** as specified on ```\\anonymous```)*
+*(notice the removal of the ```-L``` switch since we are now not listing the shares, but rather connecting to, in this case **anonymous** as specified on ```\\anonymous```)*<br>
+
+<p align="center"> <img src="./images/9.png"></p><br>
+
+We are in.<br>
+
+Let's see what this share contains.<br>
+
+```bash
+$ ls
+```
+
 
 
 
