@@ -555,7 +555,7 @@ Now look for the *root.txt* file on your own, which is easy to find.<br>
 
 <p>-----------------</p>
 
-**w12r3dup**<br>
+**w1r3dup**<br>
 
 *~/cybersamurai$*
 
