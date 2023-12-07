@@ -194,6 +194,7 @@ And these are the settings you need to add:
 
 <p>When that is done, you will be able to switch to it using the extension.</p>
 
+<p align="center"> <img src="./images/21.png"></p><br>
 
 
 
