@@ -186,7 +186,11 @@ For this, we will use *Burpsuite* to insert the password list as the payload to 
 ***Disclaimer:***
 *For this to work, you need to set up a proxy to be able to intercept traffic. In our case, we are using FoxyProxy. This is a FireFox extension that will allow us to do all the testing we require.*
 
+<p align="center"> <img src="./images/19.png"></p><br>
 
+And these are the settings you need to add:
+
+<p align="center"> <img src="./images/20.png"></p><br>
 
 
 
