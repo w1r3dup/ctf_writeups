@@ -122,6 +122,11 @@ Change directory to the directory *logs* so we can check what there is inside.<b
 ```bash
 cd logs
 ```
+<p align="center"> <img src="./images/12.png"></p><br>
+
+They look like log files. We need to investigate these and see if we can capture important data. Let's download them to our local machine using the ```get``` command like before.<br>
+
+
 
 
 
