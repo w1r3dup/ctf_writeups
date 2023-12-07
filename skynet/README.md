@@ -204,12 +204,31 @@ After you successfully set FoxyProxy up, head over to Burpsuite, switch to the *
 
 <p align="center"> <img src="./images/24.png"></p><br>
 
+<p>On the SquirrelMail page, let's enter a random username and a random password so we can see the outcome of it on Burpsuite.</p>
 
+<p>Hit Forward on Burp to see the result.</p>
 
+<p align="center"> <img src="./images/25.png"></p><br>
 
+Okay! So, from here, we need to grab *login_username*, change it to **milesdyson** and change *secretkey* in a way that it iterates through the *log1.txt* passwords.<br>
 
+To do this, right click on that line of code and click *Send to Intruder*.<br>
 
+<p align="center"> <img src="./images/26.png"></p><br>
 
+Let's manually change *login_username* to **milesdyson**.<br>
+
+As for *secretkey*, highlight **admin** (or the random password you inserted) and click on **Add §**. If done correctly, it will look like this:<br>
+
+<p align="center"> <img src="./images/27.png"></p><br>
+
+Now, let's make sure that the *Attack type* is set to *Sniper*, which in this case it is.<br>
+
+<p align="center"> <img src="./images/28.png"></p><br>
+
+Now, let's head over to the tab *Payloads*. This is where we get to insert the password list.<br>
+
+<p align="center"> <img src="./images/29.png"></p><br>
 
 
 
