@@ -7,7 +7,7 @@ Dedicated to all the legends on our Discord channel - *CyberSamurai*
 
 
 <h1> Enumeration </h1>
-<h2>NMAP</h2>
+<h3>NMAP</h3>
 <p>First, we start with the CLASSIC nmap scan</p>
 
 ```bash
@@ -28,7 +28,7 @@ Okay, so we have webserver being hosted on port 80, OpenSSH on port 22 and Samba
 
 Let's investigate port 80 first.<br><br>
 
-<h3>Port 80 (HTTP)</h3>
+<h2>Port 80 (HTTP)</h2>
 Navigating to the webserver using the IP Address of the target machine (in this case 10.10.177.196) on a browser of your choice, you get the below:<br>
 <p align="center"> <img src="./images/3.png"></p><br>
 
@@ -36,7 +36,7 @@ This looks like a search engine, which does nothing when you search or when you 
 
 Viewing the Page Source also does not disclose any information.
 
-<h2>GOBUSTER</h2>
+<h3>GOBUSTER</h3>
 
 ```bash
 gobuster dir -u http://[targetIP]/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
@@ -60,14 +60,27 @@ However, */squirrelmail* brings up what looks like a webmail system (hence the o
 
 While there is nothing we can do just as yet, it conviently discloses the version SquirrelMail is running on. **Version 1.4.23**.
 
-<h2>SEARCHSPLOIT</h2>
+<h3>SEARCHSPLOIT</h3>
 
 ```bash
-searchsploit squirrelmail
+$ searchsploit squirrelmail
 ```
-<p align="center"> <img src="./images/4.png"></p><br>
+<p align="center"> <img src="./images/7.png"></p><br>
 
+<p>Although there are some very important information regarding SquirrelMail vulnerabilities here, there are none that pique my interest since the version of SquirrelMail we are dealing with is not referenced anywhere.</p>
 
+<p>For now, there is not much else we can do on the webserver.</p>
+
+<p>Let's investigate port 139.</p>
+
+<h2>Port 139 (SMB)</h2>
+
+<h3>SMBCLIENT</h3>
+Let's use smbclient to enumerate the SMB File Share system on the server.<br>
+
+```bash
+$ smbclient -L \\\\[targetIP]\\ 
+```
 
 
 
