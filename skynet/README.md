@@ -122,9 +122,21 @@ Change directory to the directory *logs* so we can check what there is inside.<b
 ```bash
 cd logs
 ```
+
 <p align="center"> <img src="./images/12.png"></p><br>
 
 They look like log files. We need to investigate these and see if we can capture important data. Let's download them to our local machine using the ```get``` command like before.<br>
+
+<p align="center"> <img src="./images/13.png"></p><br>
+
+Now that we have all the content that was on the *anonymous* share stored on our local machine, lets start seeing what they contain.<br>
+
+Open another terminal instance and list the contents of *attention.txt* on your screen.<br>
+
+```bash
+cat attention.txt
+```
+*(if this does not work, make sure you are in the same directory that attention.txt is located)*<br>
 
 
 
