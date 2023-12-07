@@ -252,10 +252,46 @@ These are emails coming from skynet. Let's see what *Samba Password reset* conta
 
 <p>Nice! We have ourselves Miles' Samba password!</p>
 
-Let's head back to ```smbclient``` and try and use the password to enter his share.
+Let's head back to ```smbclient``` and try and use the password to enter his share.<br>
 
 <h2>Port 139 (SMB) Revisited:</h2>
 
 <p>Now that we know the username and the password, we need to change the command a little bit so we can log into the share using a specified username.</p>
+
+```bash
+smbclient \\\\[boxIP]\\milesdyson -U milesdyson
+```
+*we added* ```-U milesdyson``` *to specify a username*<br>
+
+Enter the password we found and **we are in!**<br>
+
+<p align="center"> <img src="./images/34.png"></p><br>
+
+Lets ```ls``` to see what we can find on this share<br>
+
+<p align="center"> <img src="./images/35.png"></p><br>
+
+We can see a bunch of PDF files and one directory called *notes*. Let's ```cd``` into it and investigate.<br>
+
+<p align="center"> <img src="./images/36.png"></p><br>
+
+Among the MD files, there is an interesting text file called *important.txt*, let's download that to our our local machine and see what it says.<br>
+
+<p align="center"> <img src="./images/37.png"></p><br>
+
+*1. Add features to beta CMS /45kra24zxs28v3yd<br>
+2. Work on T-800 Model 101 blueprints<br>
+3. Spend more time with my wife*<br>
+
+Number 1 shows what seems like a directory for a new CMS. *Miles you gotta take care of that wife, man*.
+
+**This answers the second question of the CTF.**<br>
+
+<p align="center"> <img src="./images/38.png"></p><br>
+
+<p>Let's head over to that directory and see what we find.</p>
+
+<h2>Port 80 (HTTP) Revisited Once More:</h2>
+
 
 
