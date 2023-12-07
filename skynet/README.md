@@ -147,6 +147,15 @@ Hmm, this is interesting. This might mean that we can attempt to brute force the
 
 <p>Let's first list the contents of the log files to see if the mean anything to us.</p>
 
+<p align="center"> <img src="./images/15.png"></p><br>
+
+The contents of *log1.txt* seem to be a list of logged passwords! We can use these in our brute force attempt later on.
+
+*log2.txt* and *log3.txt* are empty.
+
+<p>Before delving deeper in this, let's investigate the other SMB shares to see if they hold any more useful data.</p>
+
+Head back to your terminal tab where you had the ```smbclient``` running and try and access the *IPC$* share.<br>
 
 
 
