@@ -60,7 +60,7 @@ If you had to navigate to the first 5 directories, you will find that all of the
 However, */squirrelmail* brings up what looks like a webmail system (hence the open ports 110 and 143?):<br>
 <p align="center"> <img src="./images/6.png"></p><br>
 
-While there is nothing we can do just as yet, it conviently discloses the version SquirrelMail is running on. **Version 1.4.23**.
+While there is nothing we can do just as yet, it conveniently discloses the version SquirrelMail is running on. **Version 1.4.23**.
 
 <h3>SEARCHSPLOIT</h3>
 
