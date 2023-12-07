@@ -461,6 +461,8 @@ As a common check to see what sudo privileges you have, we usually run the comma
 
 So, let's cd over to */tmp* folder since that is usually a writable folder.<br>
 
+<h3>LINPEAS</h3>
+
 From here, open a new terminal and we will download **Linpeas** on our local machine. Linpeas scans the target for any vulnerabilites which could allow us to escalate our privileges.<br>
 *https://github.com/carlospolop/PEASS-ng/releases/tag/20231203-9cdcb38f*
 
@@ -498,6 +500,8 @@ The first thing I look for when I run linpeas is the **Sudo version** and it's v
 In this case it's Sudo version **1.8.16**.<br>
 
 <p align="center"> <img src="./images/59.png"></p><br>
+
+<h3>CVE-2021-4034</h3>
 
 From what I've learned before, this version of Sudo may be vulnerable to a PwnKit **CVE-2021-4034**.
 *https://github.com/berdav/CVE-2021-4034*
